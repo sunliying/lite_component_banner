@@ -28,6 +28,7 @@ div.banner {
 .banner .image_current {
 	visibility: visible;
 }
+
 .banner .image_pre {
 	
 	z-index: 1001;
@@ -142,6 +143,10 @@ div.banner {
 	display: inline-block;
 	margin: 10px;
 	cursor: pointer;
+}
+
+.banner .dots .color{
+	background-color: blue;
 }
 .banner .dots li:hover {
 	background-color: #0000FF;

@@ -16,9 +16,11 @@ define(["bower_components/litejs/lite"],function(l){
 	var next= 1;
 	var	animating = false;
 	var flag;
+	// the current state
 	l.addClass(images[current],'image_current');
 
 
+        //  when the animation is running, make animating ture
 		for (var i = 0; i < images.length; i++) {
 			images[i].addEventListener("webkitAnimationStart",function(){
 				animating =true;
@@ -29,8 +31,20 @@ define(["bower_components/litejs/lite"],function(l){
 		})
 			
 		};
-		
 
+		// make sure there are element node
+		var _dots=[];
+
+		for (var i = 0; i < dots.childNodes.length; i++) {
+			if(dots.childNodes[i].nodeType == 1){
+				_dots.push(dots.childNodes[i]);
+			}
+		};
+
+		//the current dot's color
+    l.addClass(_dots[current],"color");		
+		
+    //接入接口
     init = function(){
 			
 		p_btn.addEventListener("click", function(){
@@ -63,10 +77,12 @@ define(["bower_components/litejs/lite"],function(l){
 			change=window.setInterval(auto,5000);
 		})
 
-		for (var i = 0; i < dots.childNodes.length; i++) {
+		
+
+		for (var i = 0; i < _dots.length; i++) {
 
 			(function(j){
-				dots.childNodes[j].addEventListener("click", function(){
+				_dots[j].addEventListener("click", function(){
 					if (animating){
 						return;
 					}
@@ -107,11 +123,13 @@ define(["bower_components/litejs/lite"],function(l){
 			l.removeClass(images[i],"image_current_pre");
 			l.removeClass(images[i],"image_next");
 			l.removeClass(images[i],"image_pre");
+			l.removeClass(_dots[i],"color");
 
 		};
 	
 		l.addClass(images[current],"image_current");
 		l.addClass(images[next],'image_current');
+		l.addClass(_dots[next],"color");
 
 		if (flag==1||(flag==2&&current<next)){
 
