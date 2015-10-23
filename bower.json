@@ -1,0 +1,22 @@
+{
+  "name": "lite_component_banner",
+  "homepage": "https://github.com/sunliying/lite_component_banner",
+  "authors": [
+    "sunliying <1174587076@qq.com>"
+  ],
+  "description": "A banner component based on litejs",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "litejs": "*"
+  }
+}

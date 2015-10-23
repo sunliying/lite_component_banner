@@ -1,0 +1,30 @@
+{
+  "name": "litejs",
+  "homepage": "https://github.com/zxc0328/litejs",
+  "authors": [
+    "ccnuzindex@gmail.com"
+  ],
+  "description": "A light weight javascript library",
+  "main": "lite.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "requirejs": "~2.1.20"
+  },
+  "_release": "242fe30dce",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "242fe30dcee9b03674f9fe48da8157389d496920"
+  },
+  "_source": "git://github.com/zxc0328/litejs.git",
+  "_target": "*",
+  "_originalSource": "litejs",
+  "_direct": true
+}
