@@ -23,10 +23,7 @@ define(["bower_components/litejs/lite"],function(l){
 	// the current state
 	l.addClass(images[current],classArray[0][0]);
         //  when the animation is running, make animating ture
-		for (var i = 0; i < images.length; i++) {
-		// 	images[i].addEventListener("webkitAnimationStart",function(){
-		// 		animating =true;
-		// })			
+		for (var i = 0; i < images.length; i++) {		
 			images[i].addEventListener("webkitAnimationEnd",function(){
 				animating = false;
 		})			
